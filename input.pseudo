@@ -1,0 +1,94 @@
+// Specifikáció
+// 1. Bemenet
+// 2. Kimenet
+// 3. Előfeltétel
+// 4. Utófeltétel
+// 5. Algoritmus
+
+// Számoljuk ki két pont távolságát
+
+input x1, y1, x2, y2
+distance = (|x2 - x1|^2 +  |y2 - y1|^2)^1/2
+output distance
+
+// Számoljunk el egy számtól 10-ig
+
+input n
+while n != 10 do
+    if n > 10 then
+        n := n-1
+    else
+        n := n+1
+end
+output n
+
+// Döntsük el, hogy egy szám prímszám-e
+// Feltételezzük, hogy a szám pozitív és egész
+
+input n
+if n < 2 then
+    output false
+else
+    for i = 2 ... (n)^1/2 do
+        if n % i = 0 then
+            output false
+    end
+    output true
+
+// Keressük meg a legkisebb számot egy tömbben
+
+input tömb[]
+min := tömb[0]
+for i = 1 ... tömb.length do
+    if tömb[i] < min then
+        min := tömb[i]
+end
+output min
+
+// Számoljuk ki egy tömb elemeinek összegét
+
+input tömb[]
+sum := 0
+for i = 0 ... tömb.length do
+    sum := sum + tömb[i]
+end
+output 
+
+// Keressük meg egy tömbben az 5-ös számot
+
+input tömb[]
+i := 1
+while i < tömb.length and tömb[i] != 5 do
+    i := i+1
+end
+if i < tömb.length then
+    output i
+else
+    output -1 // nincs benne az 5
+
+
+// Adjuk meg egy tömb 5-nél nagyobb elemeinek indexeit
+
+input tömb[]
+eredmeny := []
+for i=0 ... tömb.length do
+    if tömb[i] > 5 then
+        eredmeny.add(i)
+end
+output eredmeny
+
+
+// Döntsük el egy évszámról, hogy szökőév-e
+// Egy évszám szökőév, ha osztható 4-gyel, de nem osztható 100-zal, kivéve, ha osztahtó 400-zal
+
+input év
+if év % 4 = 0 then
+    if év % 100 = 0 then
+        if év % 400 = 0 then
+            output true
+        else
+            output false
+    else
+        output true
+else
+    output false

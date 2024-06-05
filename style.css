@@ -1,0 +1,50 @@
+html{
+    background-color: red;
+}
+
+body{
+    background-color: blue;
+}
+
+h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#tesztDiv{
+    text-decoration: underline;
+}
+
+.sor{
+    background-color: black;
+}
+
+thead p{
+    color: white;
+}
+
+html body table .sor td{
+    background-color: yellow;
+}
+
+/*margin
+padding
+background-color
+color
+text-decoration
+text-align
+font-size
+font-weight
+font-style
+font-family
+border
+border-radius
+width
+height
+display
+position
+top
+left
+right
+bottom
+float */
